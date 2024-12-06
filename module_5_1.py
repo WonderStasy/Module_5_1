@@ -3,13 +3,12 @@ class House:
         self.name = name
         self.number_of_floors = nof
 
-    def go_to(self, new_floor):
-        for i in range(1, new_floor + 1):
-            if new_floor > self.number_of_floors or new_floor < 1:
-                print('Такого этажа не существует')
-                break
-            else:
+        def go_to(self, new_floor):
+        if 1 < new_floor < self.number_of_floors:
+            for i in range(1, new_floor + 1):
                 print(i)
+            else:
+                print('Такого этажа не существует')
 
 
 
